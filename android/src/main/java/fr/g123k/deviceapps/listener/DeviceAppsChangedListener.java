@@ -101,6 +101,7 @@ public class DeviceAppsChangedListener {
     public void unregister(@NonNull Context context) {
         if (appsBroadcastReceiver != null) {
             context.unregisterReceiver(appsBroadcastReceiver);
+            appsBroadcastReceiver = null;
         }
 
         sinks.clear();
